@@ -1,0 +1,107 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    padding: 20rem 0;
+    margin-top: -20vh;
+
+    @include respond(tab-port){
+        padding: 20rem 0;
+     
+    }
+
+  
+    
+}
+
+.section-card-about{
+    padding:15rem 0;
+    background: {
+        image: linear-gradient(to right, 
+        rgba($color-primary-light,0.8), 
+        rgba($color-primary,0.8)), 
+        url("../../media/features.jpg");
+        
+        size: cover;
+        position:center;
+        repeat:no-repeat;
+    };
+
+    margin-top: -4rem;
+    transform: skewY(-4.4deg);
+    
+    //a TUTTE le row figlie di section-card
+    & > * {
+        transform: skewY(4.4deg);
+    }
+
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+    
+}
+
+.products{
+    background-color: $color-grey-light-1;
+    padding: 25rem 0 15rem 0;
+    margin-top:-20vh;
+
+    @include respond(tab-port){
+        padding: 20rem 0 10rem 0;
+    }
+}
+
+.stories{
+    position: relative;
+    padding: 15rem 0;
+    @include respond(tab-port){
+        padding: 10rem 0;
+    }
+}
+
+.section-book {
+    padding: 15rem 0;
+    background-image: linear-gradient(to right bottom , $color-primary-light , $color-primary-dark);
+    
+    @include respond(tab-port) {
+        padding: 10rem 0;
+    }
+}
+
+.book {
+    //EFFETTO ANGOLARE SU IMG
+    background-image: linear-gradient(120deg, rgba($bg-light, .9) 0% , 
+                        rgba($bg-light, .9) 50%, transparent 50%)
+                        ,url(../../media/bee.jpg);
+
+    background-size: 100%;
+    border-radius: 3px;
+    box-shadow:0 1.5rem 4rem rgba($color-black, .2);
+
+    @include respond(tab-land) {
+        background-image: linear-gradient(105deg, 
+                        rgba($bg-light, .9) 0%,
+                        rgba($bg-light, .9) 65%,
+                        transparent 65%) ,
+                        url(../../media/bee.jpg);
+        background-size: cover;
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right, 
+                            rgba($bg-light, .9) 0%,
+                            rgba($bg-light, .9) 100%),
+                            url(../../media/bee.jpg);
+        }
+    
+    &__form {
+        padding: 5rem;
+        width: 50%;
+
+        @include respond(tab-land) {
+            width: 65%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+    }
+}

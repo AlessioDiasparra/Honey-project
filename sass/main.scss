@@ -1,0 +1,32 @@
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/collage";
+@import "components/card-about";
+@import "components/card-rotate";
+@import "components/story";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
+
+@import "pages/home";
+
+//MAIN FONT
+@import url('https://fonts.googleapis.com/css2?family=Capriola&display=swap');
+
+//SECOND FONT RALEWAY 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+

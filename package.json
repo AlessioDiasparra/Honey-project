@@ -1,0 +1,18 @@
+{
+  "name": "honey",
+  "version": "1.0.0",
+  "description": "landing page honey",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.compiled.css",
+    "devserver": "live-server",
+    "compress:css": "node-sass css/style.compiled.css css/style.css --output-style compressed"
+  },
+  "author": "ALESSIO",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {}
+}

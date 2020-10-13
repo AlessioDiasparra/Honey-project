@@ -1,0 +1,113 @@
+//btn component
+.btn{
+    &,
+    &:visited,
+    &:link,
+    &:focus{
+        text: {
+            transform:uppercase;
+            decoration:none;
+            
+        };
+        
+        padding: 1.6rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2;
+        position: relative;
+        font-size:$default-font-size;
+        
+        outline:0 !important;
+
+        //change per tag con <button> 
+        border:0 ;
+        cursor: pointer;
+    }
+    
+    &:hover{
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+    
+    &:active{
+        transform: translateY(-1px);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+    
+    &::after{
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0%;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--white{
+        background-color:$bg-light;
+        color:$text-color-button ;
+        
+        &::after{
+            background-color:$bg-light;
+        }
+    }
+    
+    &--orange{
+        background-color: $color-primary;
+        color: $bg-light;
+        
+        &::after{
+            background-color:$color-primary;
+        }
+    }
+    
+    &--animated{
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+
+    &--lg{
+        padding:1.8rem 3.5rem ;
+        width: 45%;
+    }
+}
+
+//btn-text component
+.btn-text{
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: .9rem;
+        transition: all .2s;
+        
+        
+    }
+    
+    &:hover{
+        background-color: $color-primary;
+        color: $bg-light;
+        box-shadow: 0 1rem 2rem rgba($color-black , .15);
+        transform:translateY(-2px);
+        font-weight: 800;
+        transform: scale(1.1);
+    }
+    
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($color-black , .15);
+        transform:translateY(0);
+    }
+    
+}
